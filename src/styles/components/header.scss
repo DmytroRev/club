@@ -1,0 +1,255 @@
+// .header {
+//   position: fixed;
+//   padding: 10px 0;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   z-index: 10;
+//   width: 100%;
+
+//   .container {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+
+//   &__list {
+//     gap: 10px;
+//   }
+
+//   &__img {
+//     width: 40px;
+//   }
+
+//   &__nav {
+//     position: fixed;
+//     width: 100%;
+//     flex-direction: column;
+//     align-items: center;
+//     height: 100%;
+//     right: 0;
+//     top: 0;
+//     transition: all .3s ease;
+//     transform: translateX(100%);
+//     z-index: 8;
+//     overflow-y: scroll;
+//   }
+// }
+
+// .logo {
+//   width: 45px;
+//   height: 45px;
+// }
+
+// .btn-menu {
+//     padding: 0;
+//     background-color: transparent;
+//     border: none;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 20px;
+//     height: 20px;
+//     cursor: pointer;
+//     position: relative;
+//     z-index: 10;
+
+//     span,
+//     &::after,
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         width: 20px;
+//         height: 1px;
+//         background-color: $whiteColor;
+//         transition: all 0.3s ease;
+//     }
+
+//     span {
+//         top: 50%;
+//         left: 0;
+//         transform: translateY(-50%);
+//     }
+
+//     &::before {
+//         top: 0;
+//         left: 0;
+//     }
+
+//     &::after {
+//         bottom: 0;
+//         left: 0;
+//     }
+
+//     &.active {
+//         span {
+//             opacity: 0;         }
+
+//         &::before {
+//             top: 50%;
+//             transform: translateY(-50%) rotate(45deg);
+//         }
+
+//         &::after {
+//             bottom: 50%;
+//             transform: translateY(50%) rotate(-45deg);
+//         }
+//     }
+// }
+
+// .menu-active .header__nav {
+//     transform: translateX(0);
+// }
+
+.header {
+  position: fixed;
+  z-index: 100;
+  padding: 10px 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  @include media(min, "md") {
+    padding: 20px 0;
+  }
+
+  @include media(min, "lg") {
+    // padding: 30px 0;
+  }
+
+  @include media(min, "xl") {
+    // padding: 46px 0 15px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list-social {
+    gap: 10px;
+
+    @include media(min, 'md') {
+    gap: 15px;  
+    }
+
+    @include media(min, 'lg') {
+      gap: 30px;
+    }
+  }
+
+  .logo {
+    width: 45px;
+  }
+
+  &__img {
+    width: 40px;
+  }
+
+  &__nav {
+    position: fixed;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    right: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+    background-color: $darkColor;
+    z-index: 8;
+    overflow-y: scroll;
+    padding: 0 0 20px;
+
+    @include media(min, "md") {
+      overflow-y: hidden;
+      position: relative;
+      transform: none;
+      background-color: transparent;
+      padding: 0;
+      width: 455px;
+    }
+
+    @include media(min, 'lg') {
+      width: 440px;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin: 50px 0 30px;
+
+    @include media(min, "md") {
+      justify-content: flex-end;
+      flex-direction: row;
+      margin: 0;
+      gap: 25px;
+    }
+
+    @include media(min, "xl") {
+      gap: 33px;
+    }
+  }
+
+  &__list-social-link {
+    @include media(min, 'md') {
+      display: none;
+    }
+  }
+
+  &__btn-menu {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 20px;
+      height: 1px;
+      transition: all 0.3s ease;
+      background-color: $whiteColor;
+    }
+
+    span {
+      width: 100%;
+      height: 1px;
+      transition: all 0.3s ease;
+      background-color: $whiteColor;
+    }
+
+    @include media(min, "md") {
+      display: none;
+    }
+  }
+}
+
+.menu-active {
+  .header__btn-menu {
+    &::before {
+      transform: rotate(45deg) translate(5px, 7px);
+    }
+
+    &::after {
+      transform: rotate(-45deg) translate(6px, -8px);
+    }
+
+    span {
+      opacity: 0;
+    }
+  }
+
+  .header__nav {
+    transform: translateX(0);
+  }
+}

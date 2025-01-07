@@ -1,0 +1,56 @@
+*:focus {
+  outline: none;
+}
+
+//for FireFox
+::-moz-focus-inner,
+::-moz-focus-outer {
+  border: 0;
+  outline: none;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  margin: 0 0 15px;
+  font-size: 20px;
+
+  @include media(min, 'md') {
+    font-size: 32px;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 14px;
+
+  @include media(min, 'md') {
+    font-size: 16px;
+  }
+}
+
+a {
+  font-size: 14px;
+
+  @include media(min, 'md') {
+    font-size: 16px;
+  }
+}

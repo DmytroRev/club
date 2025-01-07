@@ -1,0 +1,11 @@
+.btn {
+  font-size: 16px;
+  padding: 10px 5px;
+  transition: all .3s ease;
+  border: 1px solid transparent;
+  border-radius: 24px;
+
+  &:hover {
+    border-color: $whiteColor;
+  }
+}
