@@ -1,17 +1,17 @@
 .banner {
-    position: absolute;
-    background-image: url('../../assets/images/two_girl.jpg');
+    // background-image: url('../../assets/images/two_girl.jpg');
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: 100% auto;
     width: 100%;
     color: $whiteColor;
     padding: 170px 0 20px;
+    position: relative;
 
-    @include media(min, 'md') {
-        background-image: url('../../assets/images/girl-corporate.webp');
-        padding: 200px 0 100px;
-    }
+    // @include media(min, 'md') {
+    //     background-image: url('../../assets/images/girl-corporate.webp');
+    //     padding: 200px 0 100px;
+    // }
 
     @include media(min, 'lg') {
         background-image: url('../../assets/images/more-girl.webp');
@@ -29,7 +29,5 @@
         }
     }
 
-    &__title {
-        font-family: $secondaryFont;
-    }
+
 }
