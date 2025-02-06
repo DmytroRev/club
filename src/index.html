@@ -18,6 +18,11 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
   </head>
 
   <body>
@@ -33,13 +38,13 @@
         </ul>
 
         <nav class="header__nav d-flex">
-          <ul class="header__list d-flex items-center">
+          <!-- <ul class="header__list d-flex items-center">
             <li><a href="/">Головна</a></li>
             <li><a href="/">Про нас</a></li>
             <li><a href="/">Наша місія</a></li>
             <li><a href="/">Структура</a></li>
             <li><a href="/">Контакти</a></li>
-          </ul>
+          </ul> -->
 
           <ul class="header__list-social-link d-flex items-center">
             <li>
@@ -68,8 +73,11 @@
             </li>
           </ul>
         </nav>
+        <div class="decor"></div>
         <div class="d-flex wrapper-menu items-center">
-          <div class="d-flex items-center wrapper-menu__item"><span class="material-symbols-outlined"> arrow_right_alt </span>Меню</div>
+          <div class="d-flex items-center wrapper-menu__item">
+            <span class="material-symbols-outlined"> arrow_right_alt </span>Меню
+          </div>
           <button class="header__btn-menu d-flex">
             <span></span>
           </button>
@@ -79,19 +87,29 @@
     <main>
       <div class="banner">
         <div class="container">
-          <div class="banner__content-wrapper d-flex column items-center">
-            <p>Надихаємо, об'єднуємо, розвиваємо!</p>
-            <h1 class="banner__title">WOMEN'S LEADERSHIP CLUB</h1>
-            <p>
-              Приєднуйтесь до нашої спільноти жінок-лідерок, щоб разом
-              створювати майбутнє, ділитися досвідом та досягати нових вершин!
-            </p>
-            <a href="/" class="btn">Приєднатися</a>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
 
-      <div class="contact-us">
+      <!-- <div class="contact-us">
         <div class="container">
           <form id="contact-form">
             <input type="text" name="user_name" placeholder="Name" required />
@@ -106,7 +124,23 @@
           </form>
           <div id="status"></div>
         </div>
-      </div>
+      </div> -->
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
