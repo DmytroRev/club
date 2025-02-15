@@ -22,7 +22,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -87,23 +91,29 @@
     <main>
       <div class="banner">
         <div class="container">
+          <div class="gradient"></div>
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                <div class="img-wrapper">
+                  <img src="assets/images/ambassador.webp" alt="ambassador" />
+                </div>
               </div>
               <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                <div class="img-wrapper">
+                  <img src="assets/images/img2.webp" alt="img2" />
+                </div>
               </div>
               <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                <div class="img-wrapper">
+                  <img src="assets/images/img3.webp" alt="img3" />
+                </div>
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper__btn-wrapper">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
@@ -126,21 +136,5 @@
         </div>
       </div> -->
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        effect: "fade",
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
   </body>
 </html>

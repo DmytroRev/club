@@ -1,8 +1,5 @@
 import "../styles/main.scss";
 import emailjs from "emailjs-com";
-import Swiper from "swiper";
-import "swiper/css";
-import "swiper/css/effect-fade";
 
 const button = document.querySelector(".header__btn-menu");
 const body = document.querySelector("body");
@@ -47,15 +44,25 @@ if (navHeader) {
 //     );
 // });
 
-// const swiper = new Swiper(".mySwiper", {
-//   spaceBetween: 30,
-//   effect: "fade",
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
+if (document.querySelector(".mySwiper")) {
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    speed: 1500,
+    spaceBetween: 0,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
