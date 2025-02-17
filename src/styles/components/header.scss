@@ -4,6 +4,15 @@
   padding: 15px 0;
   width: 100%;
 
+  @include media(min, "md") {
+    padding: 20px 0;
+  }
+
+  @include media(min, "xl") {
+    width: 61%;
+    padding: 30px 30px 30px 123px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -13,22 +22,17 @@
     width: 50%;
     background-color: $borderGray;
 
-    @include media(min, 'md') {
+    @include media(min, "md") {
       width: 65%;
     }
 
-    @include media(min, 'lg') {
+    @include media(min, "lg") {
       width: 75%;
     }
-  }
 
-  @include media(min, "md") {
-    padding: 20px 0;
-  }
-
-  @include media(min, "xl") {
-    width: 61%;
-    padding: 30px;
+    @include media(min, "lg") {
+      width: 87%;
+    }
   }
 
   .container {
@@ -69,7 +73,7 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
-    right: 0;
+    left: 0;
     top: 0;
     transition: all 0.8s ease;
     transform: translateX(-100%);
@@ -77,9 +81,8 @@
     z-index: 8;
     padding: 0 0 20px;
 
-    @include media(min, "xl") {
-      max-width: 1000px;
-      margin-right: 41%;
+    @include media(min, "lg") {
+      width: 65%;
       border-bottom-right-radius: 50px;
     }
 
@@ -145,12 +148,6 @@
     align-items: center;
     margin: 50px 0 30px;
     justify-content: space-between;
-
-    @include media(min, "md") {
-    }
-
-    @include media(min, "xl") {
-    }
   }
 
   &__list-social-link {
@@ -159,10 +156,23 @@
     }
   }
 
+  .btn-header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: $whiteColor;
+    border: none;
+    cursor: pointer;
+  }
+
   &__btn-menu {
     padding: 0;
-    background-color: transparent;
-    border-radius: 50%;
     border: none;
     flex-direction: column;
     justify-content: space-between;
@@ -171,7 +181,6 @@
     height: 17px;
     cursor: pointer;
     position: relative;
-    z-index: 10;
     color: $darkColor;
 
     &::before,
@@ -189,20 +198,16 @@
       transition: all 0.3s ease;
       background-color: $darkColor;
     }
-
-    // @include media(min, "md") {
-    //   display: none;
-    // }
   }
 }
 
 .decor {
-  @include media(min, "xl") {
+  @include media(min, "lg") {
     position: absolute;
     transform: translateX(-100%);
     background-color: $whiteColor;
     z-index: 7;
-    right: 0;
+    left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
@@ -232,13 +237,11 @@
 
   .decor {
     transform: translateX(0);
-    right: -100%;
+    left: 80%;
   }
 
-  .wrapper-menu {
-    &.bg-decor::after {
-      background-color: $warningPrimaryColor;
-    }
+  .btn-header {
+    background-color: $warningPrimaryColor;
   }
 
   .text-warning {
@@ -253,35 +256,35 @@
 
   @include media(min, "xl") {
     position: absolute;
-    right: 0;
-    top: 35px;
+    right: 45px;
+    top: 29px;
     flex-direction: column-reverse;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: -5px;
-    right: -7px;
-    background-color: $whiteColor;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    z-index: 9;
-    pointer-events: all;
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: -5px;
+  //   right: -7px;
+  //   background-color: $whiteColor;
+  //   border-radius: 50%;
+  //   width: 35px;
+  //   height: 35px;
+  //   z-index: 9;
+  //   pointer-events: all;
 
-    @include media(min, "lg") {
-      width: 50px;
-      height: 50px;
-      top: -12px;
-      right: -14px;
-    }
+  //   @include media(min, "lg") {
+  //     width: 50px;
+  //     height: 50px;
+  //     top: -12px;
+  //     right: -14px;
+  //   }
 
-    @include media(min, "xl") {
-      top: -16px;
-      right: -1px;
-    }
-  }
+  //   @include media(min, "xl") {
+  //     top: -16px;
+  //     right: -1px;
+  //   }
+  // }
 
   &__item {
     margin: 0 20px;

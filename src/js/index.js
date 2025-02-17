@@ -1,16 +1,14 @@
 import "../styles/main.scss";
 import emailjs from "emailjs-com";
 
-const button = document.querySelector(".header__btn-menu");
+const button = document.querySelector(".btn-header");
 const body = document.querySelector("body");
 const navHeader = document.querySelector(".header__list");
-const menuBg = document.querySelector(".wrapper-menu");
 const link = document.querySelector(".list-link");
 
 if (button) {
   button.addEventListener("click", () => {
     body.classList.toggle("menu-active");
-    menuBg?.classList.toggle("bg-decor");
     link?.classList.toggle("text-warning");
   });
 }
