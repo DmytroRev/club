@@ -12,7 +12,14 @@
     height: 1px;
     width: 50%;
     background-color: $borderGray;
-    z-index: -1;
+
+    @include media(min, 'md') {
+      width: 65%;
+    }
+
+    @include media(min, 'lg') {
+      width: 75%;
+    }
   }
 
   @include media(min, "md") {
@@ -72,7 +79,7 @@
 
     @include media(min, "xl") {
       max-width: 1000px;
-      margin-right: 35%;
+      margin-right: 41%;
       border-bottom-right-radius: 50px;
     }
 
