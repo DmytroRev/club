@@ -5,6 +5,7 @@ const button = document.querySelector(".btn-header");
 const body = document.querySelector("body");
 const navHeader = document.querySelector(".header__list");
 const link = document.querySelector(".list-link");
+const header = document.querySelector("header");
 
 if (button) {
   button.addEventListener("click", () => {
@@ -18,6 +19,19 @@ if (navHeader) {
     body.classList.remove("menu-active");
   });
 }
+
+function onScroll() {
+  const scrollPosition = window.scrollY;
+  if (scrollPosition > 50) {
+    header.classList.add("sticky");
+    header.classList.add('width')
+  } else {
+    header.classList.remove("sticky");
+    header.classList.remove('width')
+
+  }
+}
+window.addEventListener("scroll", onScroll);
 
 // document.getElementById("contact-form").addEventListener("submit", (e) => {
 //   e.preventDefault();
@@ -56,7 +70,7 @@ if (document.querySelector(".mySwiper")) {
       onlyInViewport: true,
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
     },
     navigation: {
       nextEl: ".swiper-button-next",

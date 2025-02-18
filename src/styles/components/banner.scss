@@ -18,7 +18,7 @@
     }
 
     @include media(min, "xl") {
-      bottom: 145px;
+      bottom: 50px;
     }
   }
 
@@ -41,7 +41,8 @@
         }
 
         @include media(min, "xl") {
-          bottom: 74px;
+          bottom: -21px;
+          left: 20%;
         }
       }
     }
@@ -59,6 +60,10 @@
         width: 280px;
         top: 90px;
         height: 350px;
+      }
+
+      @include media(min, "lg") {
+        top: 100px;
       }
 
       @include media(min, "xl") {
@@ -100,6 +105,19 @@
         object-fit: cover;
         height: 100%;
         border-radius: 0 0 500px 500px;
+      }
+
+      &::after {
+        @include media(min, "xl") {
+          position: absolute;
+          background-image: url("../../assets/images/img-decor.webp");
+          background-repeat: no-repeat;
+          content: "";
+          right: -44px;
+          top: 46%;
+          width: 60px;
+          height: 110px;
+        }
       }
     }
 
@@ -268,7 +286,7 @@
     }
 
     @include media(min, "xl") {
-      margin-top: 74px;
+      margin-top: 169px;
       font-size: 18px;
     }
   }
@@ -279,7 +297,7 @@
     }
 
     @include media(min, "xl") {
-      margin-top: 11px;
+      margin-top: 105px;
     }
   }
 
@@ -289,7 +307,25 @@
     }
 
     @include media(min, "xl") {
-      margin-top: 11px;
+      margin-top: 105px;
+    }
+  }
+
+  .construction {
+    position: relative;
+
+    &::after {
+      @include media(min, "xl") {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 350px;
+        width: 610px;
+        height: 230px;
+        background-image: url("../../assets/images/mouse.svg");
+        background-repeat: no-repeat;
+        z-index: -1;
+      }
     }
   }
 }
