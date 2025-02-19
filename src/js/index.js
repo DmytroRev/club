@@ -24,11 +24,10 @@ function onScroll() {
   const scrollPosition = window.scrollY;
   if (scrollPosition > 50) {
     header.classList.add("sticky");
-    header.classList.add('width')
+    header.classList.add("width");
   } else {
     header.classList.remove("sticky");
-    header.classList.remove('width')
-
+    header.classList.remove("width");
   }
 }
 window.addEventListener("scroll", onScroll);
@@ -71,6 +70,7 @@ if (document.querySelector(".mySwiper")) {
     },
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -78,3 +78,25 @@ if (document.querySelector(".mySwiper")) {
     },
   });
 }
+
+const swiper = new Swiper(".swiperMulti", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});

@@ -3,6 +3,10 @@
   height: 650px;
   position: relative;
 
+  @include media(min, 'md') {
+    text-align: left;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -124,8 +128,8 @@
     .text-wrapper {
       position: absolute;
       width: 275px;
-      height: 200px;
-      bottom: -270px;
+      height: 150px;
+      bottom: -230px;
       left: 0;
 
       @include media(min, "md") {
@@ -275,7 +279,7 @@
   }
 
   .btn {
-    margin-top: 30px;
+    margin-top: 20px;
 
     @include media(min, "md") {
       margin-top: 70px;
@@ -292,6 +296,8 @@
   }
 
   .btn-primary {
+    margin-top: -3.5px;
+
     @include media(min, "md") {
       margin-top: 25px;
     }

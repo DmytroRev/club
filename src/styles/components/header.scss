@@ -85,7 +85,6 @@
     z-index: 8;
     padding: 0 0 20px;
 
-
     @include media(min, "lg") {
       width: 65%;
       border-bottom-right-radius: 50px;
@@ -100,7 +99,7 @@
       top: 80px;
       width: 100%;
 
-      @include media(min, 'md') {
+      @include media(min, "md") {
         top: 90px;
       }
 
@@ -265,6 +264,7 @@
 }
 
 .wrapper-menu {
+  transition: all 0.3s ease;
   position: relative;
 
   @include media(min, "lg") {
@@ -330,8 +330,15 @@
     color: $whiteColor;
   }
 
+  .wrapper-menu {
+    @include media(min, "xl") {
+      transition: all 0.3s ease;
+      left: 88%;
+    }
+  }
+
   .wrapper-menu__item {
-    color: $whiteColor
+    color: $whiteColor;
   }
 }
 
