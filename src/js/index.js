@@ -88,8 +88,8 @@ const swiper = new Swiper(".swiperMulti", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".mod-button-next",
+    prevEl: ".mod-button-prev",
   },
   breakpoints: {
     768: {

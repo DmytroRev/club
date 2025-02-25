@@ -346,8 +346,6 @@
   transition: all 0.5s ease;
 
   &::after {
-    @include media(min, "lg") {
-      width: 100%;
-    }
+    width: 100%;
   }
 }
