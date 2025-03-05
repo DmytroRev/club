@@ -15,36 +15,45 @@ strong {
 }
 
 h1 {
-  margin: 0 0 15px;
+  margin: 0 0 25px;
   font-size: 32px;
 
-  @include media(min, 'md') {
+  @include media(min, "md") {
     font-size: 38px;
   }
 
-  @include media(min, 'lg') {
+  @include media(min, "lg") {
     font-size: 46px;
   }
 
-  @include media(min, 'xl') {
+  @include media(min, "xl") {
     font-size: 50px;
   }
 }
 
 h2 {
-  margin: 0 0 15px;
+  margin: 0 0 20px;
   font-size: 22px;
 
-  @include media(min, 'md') {
+  @include media(min, "md") {
     font-size: 26px;
   }
 
-  @include media(min, 'lg') {
+  @include media(min, "lg") {
     font-size: 28px;
   }
 
-  @include media(min, 'xl') {
+  @include media(min, "xl") {
     font-size: 32px;
+  }
+}
+
+h3 {
+  margin: 0 0 15px;
+  font-size: 20px;
+
+  @include media(min, "lg") {
+    font-size: 24px;
   }
 }
 
@@ -55,18 +64,14 @@ ul {
 }
 
 p {
-  margin: 10px 0;
-  font-size: 14px;
-
-  @include media(min, 'md') {
-    font-size: 16px;
-  }
+  margin: 0 0 15px;
+  font-size: 16px;
 }
 
 a {
   font-size: 14px;
 
-  @include media(min, 'md') {
+  @include media(min, "md") {
     font-size: 16px;
   }
 }

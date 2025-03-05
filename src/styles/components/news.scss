@@ -1,6 +1,6 @@
 .news {
   padding: 50px 0;
-  margin: 20px 0;
+  margin: 20px 0 0 0;
   position: relative;
 
   @include media(min, "xl") {
@@ -67,11 +67,26 @@
   }
 
   .panel {
+    position: relative;
     margin-top: 30px;
     justify-content: space-between;
 
     @include media(min, "md") {
       flex-direction: row;
+    }
+
+    &::after {
+      @include media(min, 'xl') {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        background-image: url('../../assets/images/dots-decoration.svg');
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
     }
 
     .programs {
@@ -90,6 +105,8 @@
       @include media(min, "xl") {
         margin: 0 55px 0 auto;
       }
+
+
 
       &::before {
         @include media(min, "md") {
@@ -136,7 +153,6 @@
     @include media(min, "md") {
       width: 33.33%;
       align-items: center;
-      justify-content: center;
     }
 
     .mod-button-next,
