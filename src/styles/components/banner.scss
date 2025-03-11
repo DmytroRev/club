@@ -12,16 +12,16 @@
   }
 
   &::before {
-    content: "";
-    position: absolute;
-    bottom: 21px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: $borderGray;
-    z-index: -1;
+
 
     @include media(min, "md") {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $borderGray;
+      z-index: -1;
       bottom: 174px;
     }
 
@@ -304,24 +304,27 @@
   }
 
   .btn-primary {
-    margin-top: -3.5px;
 
     @include media(min, "md") {
-      margin-top: 25px;
+      margin-top: 17px;
+    }
+
+    @include media(min, 'lg') {
+      margin-top: 12px;
     }
 
     @include media(min, "xl") {
-      margin-top: 105px;
+      margin-top: 94px;
     }
   }
 
   .btn-secondary {
     @include media(min, "lg") {
-      margin-top: 43px;
+      margin-top: 29px;
     }
 
     @include media(min, "xl") {
-      margin-top: 105px;
+      margin-top: 94px;
     }
   }
 
